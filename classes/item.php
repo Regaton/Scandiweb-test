@@ -49,14 +49,7 @@ use dbdriver\DBDriver;
           $params['type'] = $this->type;
 		  $this->insert('items',$params);
 		}
-		public function AddData(array $itemData) // Add data to object 
-		{
-		    $this->type = $itemData['type'];
-			$this->name = $itemData['name'];
-			$this->code = $itemData['code'];
-			$this->price = $itemData['price'];
-			$this->date = $itemData['date'];
-		}
+
 		public function getCategory(array $data) // Adding data (with executive class)
 		{
 		 	$category = $this->makeCategory();
@@ -67,5 +60,13 @@ use dbdriver\DBDriver;
 		{
 			$category = $this->makeCategory();
 			$category->DeleteField($ItemID);
+		}		
+		public function AddData(array $itemData) // Add data to object 
+		{
+		    $this->type = $itemData['type'];
+			$this->name = $itemData['name'];
+			$this->code = $itemData['code'];
+			$this->price = $itemData['price'];
+			$this->date = $itemData['date'];
 		}
 	}
