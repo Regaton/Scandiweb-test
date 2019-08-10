@@ -42,6 +42,11 @@ use dbdriver\DBDriver;
 		}
 		protected function AddField(array $params = []) // Prepare query to add data to DB
 		{
+           
+           
+           
+           
+           
             $params['code'] = $this->code;
             $params['name'] = $this->name;
             $params['price'] = $this->price;
