@@ -44,12 +44,12 @@ use dbdriver\DBDriver;
 		}
 		protected function AddField(array $params = []) // Prepare query to add data to DB
 		{    
-          $params['code'] = $this->code;
-          $params['name'] = $this->name;
-          $params['price'] = $this->price;
-          $params['date'] = $this->date;
-          $params['type'] = $this->type;
-		  $this->insert('items',$params);
+           $params['code'] = $this->code;
+           $params['name'] = $this->name;
+           $params['price'] = $this->price;
+           $params['date'] = $this->date;
+           $params['type'] = $this->type;
+          $this->insert('items',$params);
 		}
 
 		public function getCategory(array $data) // Adding data (with executive class)
