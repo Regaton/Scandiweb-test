@@ -28,7 +28,7 @@ use dbdriver\DBDriver;
 		}
 		public function __get($property) // Getter
 		{
-	    	if (property_exists($this, $property)) {
+	    	    if (property_exists($this, $property)) {
                        return $this->$property;
                    }
 		    else {
