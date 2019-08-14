@@ -65,7 +65,7 @@ use dbdriver\DBDriver;
 		}		
 		public function AddData(array $itemData) // Add data to object 
 		{
-		    $this->type = $itemData['type'];
+		      $this->type = $itemData['type'];
 			$this->name = $itemData['name'];
 			$this->code = $itemData['code'];
 			$this->price = $itemData['price'];
