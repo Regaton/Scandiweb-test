@@ -28,12 +28,12 @@ use dbdriver\DBDriver;
 		}
 		public function __get($property) // Getter
 		{
-		if (property_exists($this, $property)) {
-                return $this->$property;
-                }
-		else {
-                throw new Exception('Undefined property ' . $property . ' referenced.');
-                }
+	    	if (property_exists($this, $property)) {
+                       return $this->$property;
+                   }
+		    else {
+                        throw new Exception('Undefined property ' . $property . ' referenced.');
+                    }
 		}
 		public function DeleteField(array $ItemID) // Prepare query to delete Items with id in params
 		{
