@@ -28,12 +28,12 @@ use dbdriver\DBDriver;
 		}
 		public function __get($property) // Getter
 		{
-			if (property_exists($this, $property)) {
+		if (property_exists($this, $property)) {
                 return $this->$property;
-            }
-			else {
+                }
+		else {
                 throw new Exception('Undefined property ' . $property . ' referenced.');
-            }
+                }
 		}
 		public function DeleteField(array $ItemID) // Prepare query to delete Items with id in params
 		{
@@ -44,12 +44,12 @@ use dbdriver\DBDriver;
 		}
 		protected function AddField(array $params = []) // Prepare query to add data to DB
 		{    
-                 $params['code'] = $this->code;
-                 $params['name'] = $this->name;
-                 $params['price'] = $this->price;
-                 $params['date'] = $this->date;
-                 $params['type'] = $this->type;
-                  $this->insert('items',$params);
+                   $params['code'] = $this->code;
+                   $params['name'] = $this->name;
+                   $params['price'] = $this->price;
+                   $params['date'] = $this->date;
+                   $params['type'] = $this->type;
+                   $this->insert('items',$params);
 		}
 
 		public function getCategory(array $data) // Adding data (with executive class)
