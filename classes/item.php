@@ -6,8 +6,7 @@ require_once 'dbdriver.php';
 use dbdriver\DBDriver;
 
 	abstract class TItem extends DBDriver // abstract Class Item
-	{ 
-		private $id;
+	{
 		private $code;
 		private $name;
 		private $price;
@@ -29,9 +28,12 @@ use dbdriver\DBDriver;
 		}
 		public function __get($property) // Getter
 		{
-			if (property_exists($this, $property)){
-				return $this->$property;
-			}
+			if (property_exists($this, $property)) {
+                return $this->$property;
+            }
+			else {
+                throw new Exception('Undefined property ' . $property . ' referenced.');
+            }
 		}
 		public function DeleteField(array $ItemID) // Prepare query to delete Items with id in params
 		{
